@@ -21,19 +21,51 @@
       "File": "audio-app/cpus"
     },
     {
+      "Name": "ForegroundBoostCapacityCPUs",
+      "Controller": "cpuset",
+      "File": "foreground-boost/cpus"
+    },
+    {
+      "Name": "MemStats",
+      "Controller": "memory",
+      "File": "memory.stat"
+    },
+    {
       "Name": "MemLimit",
       "Controller": "memory",
-      "File": "memory.limit_in_bytes"
+      "File": "memory.limit_in_bytes",
+      "FileV2": "memory.max"
     },
     {
       "Name": "MemSoftLimit",
       "Controller": "memory",
-      "File": "memory.soft_limit_in_bytes"
+      "File": "memory.soft_limit_in_bytes",
+      "FileV2": "memory.low"
     },
     {
       "Name": "MemSwappiness",
       "Controller": "memory",
       "File": "memory.swappiness"
+    },
+    {
+      "Name": "MemUsage",
+      "Controller": "memory",
+      "File": "memory.usage_in_bytes"
+    },
+    {
+      "Name": "MemAndSwapUsage",
+      "Controller": "memory",
+      "File": "memory.memsw.usage_in_bytes"
+    },
+    {
+      "Name": "MemPressureLevel",
+      "Controller": "memory",
+      "File": "memory.pressure_level"
+    },
+    {
+      "Name": "MemCgroupEventControl",
+      "Controller": "memory",
+      "File": "cgroup.event_control"
     },
     {
       "Name": "UClampMin",
@@ -61,19 +93,32 @@
       "File": "frozen/freezer.state"
     },
     {
-      "Name": "GpisSfCpuset",
-      "Controller": "cpuset",
-      "File": "cpus"
+      "Name": "BfqWeight",
+      "Controller": "io",
+      "File": "blkio.bfq.weight",
+      "FileV2": "io.bfq.weight"
     },
     {
-      "Name": "OlafState",
-      "Controller": "sfreezer",
-      "File": "olaf/freezer.state"
+      "Name": "CfqGroupIdle",
+      "Controller": "io",
+      "File": "blkio.group_idle",
+      "FileV2": "io.group_idle"
+    },
+    {
+      "Name": "CfqWeight",
+      "Controller": "io",
+      "File": "blkio.weight",
+      "FileV2": "io.weight"
     },
     {
       "Name": "SlowdownState",
       "Controller": "sfreezer",
       "File": "abnormal/freezer.state"
+    },
+    {
+      "Name": "GpisSfCpuset",
+      "Controller": "cpuset",
+      "File": "cpus"
     }
   ],
 
@@ -196,6 +241,19 @@
       ]
     },
     {
+      "Name": "SystemServicePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "foreground-boost"
+          }
+        }
+      ]
+    },
+    {
       "Name": "MaxPerformance",
       "Actions": [
         {
@@ -260,7 +318,19 @@
         }
       ]
     },
-
+    {
+      "Name": "Dex2oatPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "dex2oat"
+          }
+        }
+      ]
+    },
     {
       "Name": "CpuPolicySpread",
       "Actions": [
@@ -433,6 +503,19 @@
       ]
     },
     {
+      "Name": "SystemServiceCapacityHigh",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "foreground-boost"
+          }
+        }
+      ]
+    },
+    {
       "Name": "ProcessCapacityMax",
       "Actions": [
         {
@@ -485,6 +568,7 @@
         }
       ]
     },
+
     {
       "Name": "CameraServiceCapacity",
       "Actions": [
@@ -538,7 +622,6 @@
         }
       ]
     },
-
     {
       "Name": "LowIoPriority",
       "Actions": [
@@ -617,6 +700,19 @@
       ]
     },
 
+    {
+      "Name": "SFMainPolicy",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "system-background"
+          }
+        }
+      ]
+    },
     {
       "Name": "PerfBoost",
       "Actions": [
@@ -701,6 +797,58 @@
       ]
     },
     {
+      "Name": "JoinOlaf",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "sfreezer",
+            "Path": "olaf"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "JoinInteractiveDexopt",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "dexopt"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SlowdownThawed",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "SlowdownState",
+            "Value": "THAWED"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SlowdownFrozen",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "SlowdownState",
+            "Value": "FROZEN"
+          }
+        }
+      ]
+    },
+    {
       "Name": "GpisSfCpusetJoin",
       "Actions" : [
         {
@@ -740,53 +888,14 @@
       ]
     },
     {
-      "Name": "DoSomethingOlaf",
+      "Name": "MidgroundProcess",
       "Actions": [
         {
-          "Name": "SetAttribute",
+          "Name": "JoinCgroup",
           "Params":
           {
-            "Name": "OlafState",
-            "Value": "FROZEN"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "DoNothingOlaf",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "OlafState",
-            "Value": "THAWED"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "SlowdownThawed",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "SlowdownState",
-            "Value": "THAWED"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "SlowdownFrozen",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "SlowdownState",
-            "Value": "FROZEN"
+            "Controller": "cpu",
+            "Path": "midground"
           }
         }
       ]
@@ -804,7 +913,7 @@
         }
       ]
     },
-	{
+    {
       "Name": "BackgroundUsage",
       "Actions": [
         {
@@ -833,16 +942,20 @@
       "Profiles": [ "HighPerformance", "HighIoPriority", "TimerSlackNormal" ]
     },
     {
+      "Name": "SCHED_SP_FOREGROUND_BOOST",
+      "Profiles": [ "SystemServicePerformance", "HighIoPriority", "TimerSlackNormal" ]
+    },
+    {
       "Name": "SCHED_SP_TOP_APP",
       "Profiles": [ "MaxPerformance", "MaxIoPriority", "TimerSlackNormal" ]
     },
     {
-      "Name": "SCHED_SP_AUDIO_APP",
-      "Profiles": [ "HighPerformance", "HighIoPriority", "TimerSlackNormal" ]
-    },
-    {
       "Name": "SCHED_SP_SYSTEM",
       "Profiles": [ "ServicePerformance", "LowIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_COMPUTE",
+      "Profiles": [ "HighPerformance", "ProcessCapacityHigh", "LowIoPriority", "TimerSlackNormal" ]
     },
     {
       "Name": "SCHED_SP_RT_APP",
@@ -861,12 +974,12 @@
       "Profiles": [ "HighPerformance", "ProcessCapacityHigh", "HighIoPriority", "TimerSlackNormal", "BackgroundUsage" ]
     },
     {
-      "Name": "CPUSET_SP_TOP_APP",
-      "Profiles": [ "MaxPerformance", "ProcessCapacityMax", "MaxIoPriority", "TimerSlackNormal", "TopAppUsage" ]
+      "Name": "CPUSET_SP_FOREGROUND_BOOST",
+      "Profiles": [ "SystemServicePerformance", "SystemServiceCapacityHigh", "HighIoPriority", "TimerSlackNormal", "BackgroundUsage" ]
     },
     {
-      "Name": "CPUSET_SP_AUDIO",
-      "Profiles": [ "HighPerformance", "AudioAppCapacity", "HighIoPriority", "TimerSlackNormal", "BackgroundUsage" ]
+      "Name": "CPUSET_SP_TOP_APP",
+      "Profiles": [ "MaxPerformance", "ProcessCapacityMax", "MaxIoPriority", "TimerSlackNormal", "TopAppUsage" ]
     },
     {
       "Name": "CPUSET_SP_SYSTEM",
@@ -878,7 +991,15 @@
     },
     {
       "Name": "Dex2OatBootComplete",
-      "Profiles": [ "SCHED_SP_BACKGROUND" ]
+      "Profiles": [ "Dex2oatPerformance", "LowIoPriority", "TimerSlackHigh" ]
+    },
+    {
+      "Name": "Dex2OatBackground",
+      "Profiles": [ "Dex2OatBootComplete" ]
+    },
+    {
+      "Name": "OtaProfiles",
+      "Profiles": [ "ServiceCapacityLow", "LowIoPriority", "HighEnergySaving" ]
     },
     {
       "Name": "GPIS_HINT_ENABLE",
