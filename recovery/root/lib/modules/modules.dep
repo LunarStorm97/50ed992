@@ -1,50 +1,50 @@
-sec_tsp_log.ko:
-novatek_ts_nt36523.ko: sec_cmd.ko sec_secure_touch.ko sec_common_fn.ko sec_tsp_log.ko
-hdm.ko:
-dropdump.ko:
-mbhc_dlkm.ko:
-q6_notifier_dlkm.ko: q6_pdr_dlkm.ko
-tcp_westwood.ko:
-platform_dlkm.ko: adsp_loader_dlkm.ko q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-swr_ctrl_dlkm.ko: q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko swr_dlkm.ko
-wcd937x_slave_dlkm.ko: swr_dlkm.ko
-blk-sec-stats.ko:
-q6_pdr_dlkm.ko:
-nfc_stm_sec.ko:
-camera.ko:
-stub_dlkm.ko:
-rmnet_ctl.ko:
-rdbg.ko:
-sec_audio_sysfs.ko:
-sec_cmd.ko: sec_tsp_log.ko
-fingerprint.ko: fingerprint_sysfs.ko
-rx_macro_dlkm.ko: swr_ctrl_dlkm.ko wcd_core_dlkm.ko bolero_cdc_dlkm.ko q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko swr_dlkm.ko
-wcd937x_dlkm.ko: mbhc_dlkm.ko wcd9xxx_dlkm.ko wcd_core_dlkm.ko q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko swr_dlkm.ko
-sec_secure_touch.ko:
-q6_dlkm.ko: apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-btpower.ko:
-tcp_htcp.ko:
-va_macro_dlkm.ko: swr_ctrl_dlkm.ko wcd_core_dlkm.ko bolero_cdc_dlkm.ko q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko swr_dlkm.ko
-apr_dlkm.ko: q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-fingerprint_sysfs.ko:
-snd_event_dlkm.ko:
-tas256x_dlkm.ko: sec_audio_sysfs.ko q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-qca_cld3_wlan.ko:
-sec_tsp_dumpkey.ko: sec_common_fn.ko sec_tsp_log.ko
-machine_dlkm.ko: tas256x_dlkm.ko sec_audio_sysfs.ko wcd937x_dlkm.ko mbhc_dlkm.ko wcd9xxx_dlkm.ko wcd_core_dlkm.ko bolero_cdc_dlkm.ko q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko swr_dlkm.ko
-swr_dlkm.ko:
-native_dlkm.ko: platform_dlkm.ko adsp_loader_dlkm.ko q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-bt_fm_slim.ko: btpower.ko
-lxs_ts.ko: sec_cmd.ko sec_secure_touch.ko sec_common_fn.ko sec_tsp_log.ko
-adsp_loader_dlkm.ko: apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-rmnet_offload.ko: rmnet_core.ko rmnet_ctl.ko
-pinctrl_lpi_dlkm.ko: q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-bolero_cdc_dlkm.ko: q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-rmnet_core.ko: rmnet_ctl.ko
-wcd9xxx_dlkm.ko: q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
-tx_macro_dlkm.ko: swr_ctrl_dlkm.ko wcd_core_dlkm.ko bolero_cdc_dlkm.ko q6_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko swr_dlkm.ko
-rmnet_shs.ko: rmnet_core.ko rmnet_ctl.ko
-ovt_td4150_spi.ko: sec_cmd.ko sec_secure_touch.ko sec_common_fn.ko sec_tsp_log.ko
-wcd_core_dlkm.ko:
-ssg-iosched.ko: blk-sec-stats.ko
-sec_common_fn.ko: sec_tsp_log.ko
+/vendor/lib/modules/sec_tsp_log.ko:
+/vendor/lib/modules/novatek_ts_nt36523.ko: /vendor/lib/modules/sec_cmd.ko /vendor/lib/modules/sec_secure_touch.ko /vendor/lib/modules/sec_common_fn.ko /vendor/lib/modules/sec_tsp_log.ko
+/vendor/lib/modules/hdm.ko:
+/vendor/lib/modules/dropdump.ko:
+/vendor/lib/modules/mbhc_dlkm.ko:
+/vendor/lib/modules/q6_notifier_dlkm.ko: /vendor/lib/modules/q6_pdr_dlkm.ko
+/vendor/lib/modules/tcp_westwood.ko:
+/vendor/lib/modules/platform_dlkm.ko: /vendor/lib/modules/adsp_loader_dlkm.ko /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/swr_ctrl_dlkm.ko: /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko /vendor/lib/modules/swr_dlkm.ko
+/vendor/lib/modules/wcd937x_slave_dlkm.ko: /vendor/lib/modules/swr_dlkm.ko
+/vendor/lib/modules/blk-sec-stats.ko:
+/vendor/lib/modules/q6_pdr_dlkm.ko:
+/vendor/lib/modules/nfc_stm_sec.ko:
+/vendor/lib/modules/camera.ko:
+/vendor/lib/modules/stub_dlkm.ko:
+/vendor/lib/modules/rmnet_ctl.ko:
+/vendor/lib/modules/rdbg.ko:
+/vendor/lib/modules/sec_audio_sysfs.ko:
+/vendor/lib/modules/sec_cmd.ko: /vendor/lib/modules/sec_tsp_log.ko
+/vendor/lib/modules/fingerprint.ko: /vendor/lib/modules/fingerprint_sysfs.ko
+/vendor/lib/modules/rx_macro_dlkm.ko: /vendor/lib/modules/swr_ctrl_dlkm.ko /vendor/lib/modules/wcd_core_dlkm.ko /vendor/lib/modules/bolero_cdc_dlkm.ko /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko /vendor/lib/modules/swr_dlkm.ko
+/vendor/lib/modules/wcd937x_dlkm.ko: /vendor/lib/modules/mbhc_dlkm.ko /vendor/lib/modules/wcd9xxx_dlkm.ko /vendor/lib/modules/wcd_core_dlkm.ko /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko /vendor/lib/modules/swr_dlkm.ko
+/vendor/lib/modules/sec_secure_touch.ko:
+/vendor/lib/modules/q6_dlkm.ko: /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/btpower.ko:
+/vendor/lib/modules/tcp_htcp.ko:
+/vendor/lib/modules/va_macro_dlkm.ko: /vendor/lib/modules/swr_ctrl_dlkm.ko /vendor/lib/modules/wcd_core_dlkm.ko /vendor/lib/modules/bolero_cdc_dlkm.ko /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko /vendor/lib/modules/swr_dlkm.ko
+/vendor/lib/modules/apr_dlkm.ko: /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/fingerprint_sysfs.ko:
+/vendor/lib/modules/snd_event_dlkm.ko:
+/vendor/lib/modules/tas256x_dlkm.ko: /vendor/lib/modules/sec_audio_sysfs.ko /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/qca_cld3_wlan.ko:
+/vendor/lib/modules/sec_tsp_dumpkey.ko: /vendor/lib/modules/sec_common_fn.ko /vendor/lib/modules/sec_tsp_log.ko
+/vendor/lib/modules/machine_dlkm.ko: /vendor/lib/modules/tas256x_dlkm.ko /vendor/lib/modules/sec_audio_sysfs.ko /vendor/lib/modules/wcd937x_dlkm.ko /vendor/lib/modules/mbhc_dlkm.ko /vendor/lib/modules/wcd9xxx_dlkm.ko /vendor/lib/modules/wcd_core_dlkm.ko /vendor/lib/modules/bolero_cdc_dlkm.ko /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko /vendor/lib/modules/swr_dlkm.ko
+/vendor/lib/modules/swr_dlkm.ko:
+/vendor/lib/modules/native_dlkm.ko: /vendor/lib/modules/platform_dlkm.ko /vendor/lib/modules/adsp_loader_dlkm.ko /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/bt_fm_slim.ko: /vendor/lib/modules/btpower.ko
+/vendor/lib/modules/lxs_ts.ko: /vendor/lib/modules/sec_cmd.ko /vendor/lib/modules/sec_secure_touch.ko /vendor/lib/modules/sec_common_fn.ko /vendor/lib/modules/sec_tsp_log.ko
+/vendor/lib/modules/adsp_loader_dlkm.ko: /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/rmnet_offload.ko: /vendor/lib/modules/rmnet_core.ko /vendor/lib/modules/rmnet_ctl.ko
+/vendor/lib/modules/pinctrl_lpi_dlkm.ko: /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/bolero_cdc_dlkm.ko: /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/rmnet_core.ko: /vendor/lib/modules/rmnet_ctl.ko
+/vendor/lib/modules/wcd9xxx_dlkm.ko: /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/tx_macro_dlkm.ko: /vendor/lib/modules/swr_ctrl_dlkm.ko /vendor/lib/modules/wcd_core_dlkm.ko /vendor/lib/modules/bolero_cdc_dlkm.ko /vendor/lib/modules/q6_dlkm.ko /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko /vendor/lib/modules/swr_dlkm.ko
+/vendor/lib/modules/rmnet_shs.ko: /vendor/lib/modules/rmnet_core.ko /vendor/lib/modules/rmnet_ctl.ko
+/vendor/lib/modules/ovt_td4150_spi.ko: /vendor/lib/modules/sec_cmd.ko /vendor/lib/modules/sec_secure_touch.ko /vendor/lib/modules/sec_common_fn.ko /vendor/lib/modules/sec_tsp_log.ko
+/vendor/lib/modules/wcd_core_dlkm.ko:
+/vendor/lib/modules/ssg-iosched.ko: /vendor/lib/modules/blk-sec-stats.ko
+/vendor/lib/modules/sec_common_fn.ko: /vendor/lib/modules/sec_tsp_log.ko
