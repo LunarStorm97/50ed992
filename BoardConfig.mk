@@ -32,10 +32,10 @@ QCOM_BOARD_PLATFORMS += $(TARGET_BOARD_PLATFORM)
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 
 TARGET_KERNEL_ARCH := $(TARGET_ARCH)
-BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_IMAGE_NAME := kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 BOARD_INCLUDE_RECOVERY_DTBO := true
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
 
 BOARD_KERNEL_CMDLINE := \
     console=null \
@@ -51,7 +51,6 @@ BOARD_KERNEL_CMDLINE := \
     cgroup.memory=nokmem,nosocket \
     firmware_class.path=/vendor/firmware_mnt/image \
     pcie_ports=compat \
-    loop.max_part=7 \
     iptable_raw.raw_before_defrag=1 \
     ip6table_raw.raw_before_defrag=1 \
     printk.devkmsg=on \
@@ -114,7 +113,6 @@ BOARD_USES_QCOM_FBE_DECRYPTION := true
 BOARD_USES_METADATA_PARTITION := true
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 RECOVERY_SDCARD_ON_DATA := true
 
@@ -141,7 +139,6 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone50/temp"
 TW_Y_OFFSET := 80
 TW_H_OFFSET := -80
 TW_HAS_DOWNLOAD_MODE := true
-TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_EXTRA_LANGUAGES := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
@@ -151,5 +148,4 @@ TW_INCLUDE_NTFS_3G := true
 # TWRP Configuration: Logd
 TWRP_EVENT_LOGGING := true
 TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
 TARGET_USES_LOGD := true
