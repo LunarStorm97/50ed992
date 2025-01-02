@@ -1,4 +1,4 @@
-# TWRP Device Tree for Samsung Galaxy A23xq 5G
+# TWRP Device Tree for Samsung Galaxy A23 5G (SM-A236M)
 
 The Galaxy A23 5G (codenamed _"a23xq"_) is an upper-mid-range smartphone from Samsung.
 
@@ -45,7 +45,7 @@ This device tree was tested and is fully compatible with [minimal-manifest-twrp]
 2. In the root folder of the fetched repo, clone the device tree:
 
 ```bash
-git clone https://github.com/TeamWin/android_device_samsung_a23xq.git -b android-12.1 device/samsung/a23xq
+git clone https://github.com/LunarStorm97/50ed992.git -b android-12.1 device/samsung/a23xq
 ```
 
 3. To build:
@@ -65,19 +65,16 @@ For their work on A52 5G, which this tree is heavily build on.
 ## Copyright
 
 ```
-#
-# Copyright (C) 2023 The TWRP Open Source Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+Copyright (C) 2025 The Android Open Source Project
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 ```
