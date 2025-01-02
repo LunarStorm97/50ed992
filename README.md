@@ -6,33 +6,32 @@ It was announced in Augustus 2022 and released in September 2022.
 
 ## Device specifications
 
-| Feature                        | Specification                                                                             |
-| -----------------------------: | :---------------------------------------------------------------------------------------- |
-| Chipset                        | Qualcomm SM6375 Snapdragon 695 5G                                                         |
-| CPU                            | Octa-core (2x2.2 GHz Kryo 660 Gold, 6x1.7 Ghz Kyro 660 Silver)                            |
-| GPU                            | Qualcomm Adreno 619                                                                       |
-| Memory                         | 4GB / 6BG / 8GB RAM (LPDDR4X)                                                             |
-| Shipped OS                     | Android 12 (One UI 4.1)                                                                   |
-| Storage                        | 128GB / 256GB (UFS 2.1)                                                                   |
-| SIM                            | Hybrid Dual SIM (Nano-SIM, dual stand-by)                                                 |
-| MicroSD                        | Up to 1TB                                                                                 |
-| Battery                        | 5000mAh Li-Po (non-removable), 25W fast charge                                            |
-| Dimensions                     | 165.4 x 76.9 x 8.4 mm (6.51 x 3.03 x 0.33 in)                                             |
-| Display                        | 6.6 inches, 104.9 cm2 (~82.5% ratio) 1080 x 2408 pixels, 20:9 ratio (~400 ppi density)    |
-| Rear Camera 1 (IMX682/S5KGW1P) | 50 MP, f/1.8, (wide), PDAF, OIS                                                           |
-| Rear Camera 2 (S5K3L6)         | 5 MP, f/2.2, 123˚ (ultrawide), 1/5.0", 1.12µm                                             |
-| Rear Camera 3 (S5KGW2)         | 2 MP, f/2.4, (macro)                                                                      |
-| Rear Camera 4 (S5K3J1)         | 2 MP, f/2.4, (depth)                                                                      |
-| Front Camera (IMX616/S5KGD2)   | 8 MP, f/2.2, (wide) - International                                                       |
-| Fingerprint                    | EFingerprint (side-mounted)                                                               |
-| Sensors                        | Accelerometer, Gyro, Proximity (virtual),                                                 |
-
+|                        Feature | Specification                                                                          |
+| -----------------------------: | :------------------------------------------------------------------------------------- |
+|                        Chipset | Qualcomm SM6375 Snapdragon 695 5G                                                      |
+|                            CPU | Octa-core (2x2.2 GHz Kryo 660 Gold, 6x1.7 Ghz Kyro 660 Silver)                         |
+|                            GPU | Qualcomm Adreno 619                                                                    |
+|                         Memory | 4GB / 6BG / 8GB RAM (LPDDR4X)                                                          |
+|                     Shipped OS | Android 12 (One UI 4.1)                                                                |
+|                        Storage | 128GB / 256GB (UFS 2.1)                                                                |
+|                            SIM | Hybrid Dual SIM (Nano-SIM, dual stand-by)                                              |
+|                        MicroSD | Up to 1TB                                                                              |
+|                        Battery | 5000mAh Li-Po (non-removable), 25W fast charge                                         |
+|                     Dimensions | 165.4 x 76.9 x 8.4 mm (6.51 x 3.03 x 0.33 in)                                          |
+|                        Display | 6.6 inches, 104.9 cm2 (~82.5% ratio) 1080 x 2408 pixels, 20:9 ratio (~400 ppi density) |
+| Rear Camera 1 (IMX682/S5KGW1P) | 50 MP, f/1.8, (wide), PDAF, OIS                                                        |
+|         Rear Camera 2 (S5K3L6) | 5 MP, f/2.2, 123˚ (ultrawide), 1/5.0", 1.12µm                                          |
+|         Rear Camera 3 (S5KGW2) | 2 MP, f/2.4, (macro)                                                                   |
+|         Rear Camera 4 (S5K3J1) | 2 MP, f/2.4, (depth)                                                                   |
+|   Front Camera (IMX616/S5KGD2) | 8 MP, f/2.2, (wide) - International                                                    |
+|                    Fingerprint | EFingerprint (side-mounted)                                                            |
+|                        Sensors | Accelerometer, Gyro, Proximity (virtual),                                              |
 
 ## Device picture
 
 <img src="https://fdn2.gsmarena.com/vv/pics/samsung/galaxy-a23-5g-2.jpg" width="45%"/>
 
-## Kernel source 
+## Kernel source
 
 Available at [https://github.com/edward0181/android_kernel_samsung_a23xq](https://github.com/edward0181/android_kernel_samsung_a23xq)
 
@@ -56,11 +55,12 @@ export ALLOW_MISSING_DEPENDENCIES=true
 lunch twrp_a23xq-eng
 mka recoveryimage
 ```
+
 ## Thanks to
+
 @[BlackMesa123](https://github.com/BlackMesa123) and
 @[Simon1511](https://github.com/Simon1511)
 For their work on A52 5G, which this tree is heavily build on.
-
 
 ## Copyright
 
