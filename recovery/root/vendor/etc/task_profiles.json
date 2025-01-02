@@ -60,11 +60,10 @@
   "Profiles": [
     {
       "Name": "GpisSfCpusetJoin",
-      "Actions" : [
+      "Actions": [
         {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
+          "Name": "JoinCgroup",
+          "Params": {
             "Controller": "cpuset",
             "Path": "sf"
           }
@@ -76,8 +75,7 @@
       "Actions": [
         {
           "Name": "SetAttribute",
-          "Params":
-          {
+          "Params": {
             "Name": "GpisSfCpuset",
             "Value": "6-7"
           }
@@ -89,8 +87,7 @@
       "Actions": [
         {
           "Name": "SetAttribute",
-          "Params":
-          {
+          "Params": {
             "Name": "GpisSfCpuset",
             "Value": "0-5"
           }
@@ -102,8 +99,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpu",
             "Path": "background"
           }
@@ -115,8 +111,7 @@
       "Actions": [
         {
           "Name": "SetAttribute",
-          "Params":
-          {
+          "Params": {
             "Name": "FreezerState",
             "Value": "1"
           }
@@ -128,8 +123,7 @@
       "Actions": [
         {
           "Name": "SetAttribute",
-          "Params":
-          {
+          "Params": {
             "Name": "FreezerState",
             "Value": "0"
           }
@@ -141,8 +135,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpu",
             "Path": ""
           }
@@ -154,8 +147,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpu",
             "Path": "foreground"
           }
@@ -167,8 +159,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpu",
             "Path": "top-app"
           }
@@ -180,8 +171,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpu",
             "Path": "rt"
           }
@@ -190,11 +180,10 @@
     },
     {
       "Name": "AudioAppPerformance",
-      "Actions" : [
+      "Actions": [
         {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
+          "Name": "JoinCgroup",
+          "Params": {
             "Controller": "cpu",
             "Path": "audio-app"
           }
@@ -207,8 +196,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": ""
           }
@@ -220,8 +208,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "system/background"
           }
@@ -233,8 +220,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "system"
           }
@@ -246,8 +232,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "system/performance"
           }
@@ -259,8 +244,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "application/background"
           }
@@ -272,8 +256,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "application"
           }
@@ -285,8 +268,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "application/performance"
           }
@@ -299,8 +281,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "background"
           }
@@ -312,8 +293,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": ""
           }
@@ -325,8 +305,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "foreground"
           }
@@ -338,8 +317,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "top-app"
           }
@@ -352,8 +330,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "system-background"
           }
@@ -365,8 +342,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "restricted"
           }
@@ -379,8 +355,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "camera-daemon"
           }
@@ -389,11 +364,10 @@
     },
     {
       "Name": "AudioAppCapacity",
-      "Actions" : [
+      "Actions": [
         {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
+          "Name": "JoinCgroup",
+          "Params": {
             "Controller": "cpuset",
             "Path": "audio-app"
           }
@@ -402,11 +376,10 @@
     },
     {
       "Name": "SystemServicePerformance",
-      "Actions" : [
+      "Actions": [
         {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
+          "Name": "JoinCgroup",
+          "Params": {
             "Controller": "cpu",
             "Path": "foreground-boost"
           }
@@ -418,8 +391,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuset",
             "Path": "foreground-boost"
           }
@@ -429,11 +401,10 @@
 
     {
       "Name": "BlkIOForeground",
-      "Actions" : [
+      "Actions": [
         {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
+          "Name": "JoinCgroup",
+          "Params": {
             "Controller": "blkio",
             "Path": ""
           }
@@ -442,11 +413,10 @@
     },
     {
       "Name": "BlkIOBackground",
-      "Actions" : [
+      "Actions": [
         {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
+          "Name": "JoinCgroup",
+          "Params": {
             "Controller": "blkio",
             "Path": "bg"
           }
@@ -459,8 +429,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "blkio",
             "Path": "background"
           }
@@ -472,8 +441,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "blkio",
             "Path": ""
           }
@@ -485,8 +453,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "blkio",
             "Path": ""
           }
@@ -498,8 +465,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "blkio",
             "Path": ""
           }
@@ -512,8 +478,7 @@
       "Actions": [
         {
           "Name": "SetTimerSlack",
-          "Params":
-          {
+          "Params": {
             "Slack": "50000"
           }
         }
@@ -524,8 +489,7 @@
       "Actions": [
         {
           "Name": "SetTimerSlack",
-          "Params":
-          {
+          "Params": {
             "Slack": "50000"
           }
         }
@@ -537,8 +501,7 @@
       "Actions": [
         {
           "Name": "SetClamps",
-          "Params":
-          {
+          "Params": {
             "Boost": "50%",
             "Clamp": "0"
           }
@@ -550,8 +513,7 @@
       "Actions": [
         {
           "Name": "SetClamps",
-          "Params":
-          {
+          "Params": {
             "Boost": "0",
             "Clamp": "30%"
           }
@@ -564,19 +526,16 @@
       "Actions": [
         {
           "Name": "SetAttribute",
-          "Params":
-          {
+          "Params": {
             "Name": "MemSoftLimit",
             "Value": "16MB"
           }
         },
         {
           "Name": "SetAttribute",
-          "Params":
-          {
+          "Params": {
             "Name": "MemSwappiness",
             "Value": "150"
-
           }
         }
       ]
@@ -586,16 +545,14 @@
       "Actions": [
         {
           "Name": "SetAttribute",
-          "Params":
-          {
+          "Params": {
             "Name": "MemSoftLimit",
             "Value": "512MB"
           }
         },
         {
           "Name": "SetAttribute",
-          "Params":
-          {
+          "Params": {
             "Name": "MemSwappiness",
             "Value": "100"
           }
@@ -607,8 +564,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "memory",
             "Path": "system"
           }
@@ -620,8 +576,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuacct",
             "Path": "top-app"
           }
@@ -633,8 +588,7 @@
       "Actions": [
         {
           "Name": "JoinCgroup",
-          "Params":
-          {
+          "Params": {
             "Controller": "cpuacct",
             "Path": "."
           }
@@ -646,59 +600,86 @@
   "AggregateProfiles": [
     {
       "Name": "GPIS_HINT_ENABLE",
-      "Profiles": [ "GpisSfCpusetEnable" ]
+      "Profiles": ["GpisSfCpusetEnable"]
     },
     {
       "Name": "GPIS_HINT_DISABLE",
-      "Profiles": [ "GpisSfCpusetDisable" ]
+      "Profiles": ["GpisSfCpusetDisable"]
     },
     {
       "Name": "SCHED_SP_DEFAULT",
-      "Profiles": [ "TimerSlackNormal" ]
+      "Profiles": ["TimerSlackNormal"]
     },
     {
       "Name": "SCHED_SP_BACKGROUND",
-      "Profiles": [ "HighEnergySaving", "LowIoPriority", "TimerSlackNormal" ]
+      "Profiles": ["HighEnergySaving", "LowIoPriority", "TimerSlackNormal"]
     },
     {
       "Name": "SCHED_SP_FOREGROUND",
-      "Profiles": [ "HighPerformance", "HighIoPriority", "TimerSlackNormal" ]
+      "Profiles": ["HighPerformance", "HighIoPriority", "TimerSlackNormal"]
     },
     {
       "Name": "SCHED_SP_TOP_APP",
-      "Profiles": [ "MaxPerformance", "MaxIoPriority", "TimerSlackNormal" ]
+      "Profiles": ["MaxPerformance", "MaxIoPriority", "TimerSlackNormal"]
     },
     {
       "Name": "SCHED_SP_RT_APP",
-      "Profiles": [ "RealtimePerformance", "MaxIoPriority", "TimerSlackNormal" ]
+      "Profiles": ["RealtimePerformance", "MaxIoPriority", "TimerSlackNormal"]
     },
     {
       "Name": "CPUSET_SP_DEFAULT",
-      "Profiles": [ "TimerSlackNormal", "BackgroundUsage" ]
+      "Profiles": ["TimerSlackNormal", "BackgroundUsage"]
     },
     {
       "Name": "CPUSET_SP_BACKGROUND",
-      "Profiles": [ "HighEnergySaving", "ProcessCapacityLow", "LowIoPriority", "TimerSlackHigh", "BackgroundUsage" ]
+      "Profiles": [
+        "HighEnergySaving",
+        "ProcessCapacityLow",
+        "LowIoPriority",
+        "TimerSlackHigh",
+        "BackgroundUsage"
+      ]
     },
     {
       "Name": "CPUSET_SP_FOREGROUND",
-      "Profiles": [ "HighPerformance", "ProcessCapacityHigh", "HighIoPriority", "TimerSlackNormal", "BackgroundUsage" ]
+      "Profiles": [
+        "HighPerformance",
+        "ProcessCapacityHigh",
+        "HighIoPriority",
+        "TimerSlackNormal",
+        "BackgroundUsage"
+      ]
     },
     {
       "Name": "CPUSET_SP_FOREGROUND_BOOST",
-      "Profiles": [ "SystemServicePerformance", "SystemServiceCapacityHigh", "HighIoPriority", "TimerSlackNormal" ]
+      "Profiles": [
+        "SystemServicePerformance",
+        "SystemServiceCapacityHigh",
+        "HighIoPriority",
+        "TimerSlackNormal"
+      ]
     },
     {
       "Name": "CPUSET_SP_TOP_APP",
-      "Profiles": [ "MaxPerformance", "ProcessCapacityMax", "MaxIoPriority", "TimerSlackNormal", "TopAppUsage" ]
+      "Profiles": [
+        "MaxPerformance",
+        "ProcessCapacityMax",
+        "MaxIoPriority",
+        "TimerSlackNormal",
+        "TopAppUsage"
+      ]
     },
     {
       "Name": "CPUSET_SP_SYSTEM",
-      "Profiles": [ "ServiceCapacityLow", "TimerSlackNormal", "BackgroundUsage" ]
+      "Profiles": ["ServiceCapacityLow", "TimerSlackNormal", "BackgroundUsage"]
     },
     {
       "Name": "CPUSET_SP_RESTRICTED",
-      "Profiles": [ "ServiceCapacityRestricted", "TimerSlackNormal", "BackgroundUsage" ]
+      "Profiles": [
+        "ServiceCapacityRestricted",
+        "TimerSlackNormal",
+        "BackgroundUsage"
+      ]
     }
   ]
 }
