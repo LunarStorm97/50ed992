@@ -29,11 +29,7 @@ It was announced in Augustus 2022 and released in September 2022.
 
 ## Device picture
 
-<img src="https://fdn2.gsmarena.com/vv/pics/samsung/galaxy-a23-5g-2.jpg" width="45%"/>
-
-## Kernel source
-
-Available at [https://github.com/edward0181/android_kernel_samsung_a23xq](https://github.com/edward0181/android_kernel_samsung_a23xq)
+<img src="https://fdn2.gsmarena.com/vv/pics/samsung/galaxy-a23-5g-2.jpg" width="50%"/>
 
 ## How to build
 
