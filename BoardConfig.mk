@@ -41,7 +41,6 @@ QCOM_BOARD_PLATFORMS += $(TARGET_BOARD_PLATFORM)
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
-
 TARGET_KERNEL_ARCH := $(TARGET_ARCH)
 BOARD_KERNEL_IMAGE_NAME := kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
@@ -49,7 +48,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
 
 BOARD_KERNEL_CMDLINE := \
-    androidboot.selinux=permissive
+    androidboot.selinux=permissive \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     lpm_levels.sleep_disabled=1 \
@@ -75,6 +74,7 @@ BOARD_MKBOOTIMG_ARGS := \
     --tags_offset 0x01e00000 \
     --dtb_offset 0x01f00000 \
     --header_version 2
+
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
     efs \
@@ -107,7 +107,13 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200
-BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product odm vendor_dlkm
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := \
+    system \
+    system_ext \
+    vendor \
+    product \
+    odm \
+    vendor_dlkm
 
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -125,8 +131,16 @@ BOARD_USES_METADATA_PARTITION := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 RECOVERY_SDCARD_ON_DATA := true
 
-# Kernel module loading for touch, battery etc
-TW_LOAD_VENDOR_MODULES := "novatek_ts_nt36523.ko sec_cmd.ko sec_common_fn.ko sec_secure_touch.ko sec_tsp_dumpkey.ko sec_tsp_log.ko lxs_ts.ko ovt_td4150_spi.ko"
+# Kernel module loading for touch, battery, etc.
+TW_LOAD_VENDOR_MODULES := \
+    novatek_ts_nt36523.ko \
+    sec_cmd.ko \
+    sec_common_fn.ko \
+    sec_secure_touch.ko \
+    sec_tsp_dumpkey.ko \
+    sec_tsp_log.ko \
+    lxs_ts.ko \
+    ovt_td4150_spi.ko
 TW_LOAD_VENDOR_BOOT_MODULES := true
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 
