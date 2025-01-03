@@ -49,7 +49,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
 
 BOARD_KERNEL_CMDLINE := \
-    console=null \
+    androidboot.selinux=permissive
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     lpm_levels.sleep_disabled=1 \
@@ -58,14 +58,12 @@ BOARD_KERNEL_CMDLINE := \
     service_locator.enable=1 \
     androidboot.usbcontroller=4e00000.dwc3 \
     swiotlb=0 \
+    firmware_class.path=/vendor/firmware_mnt/image \
     loop.max_part=7 \
     cgroup.memory=nokmem,nosocket \
-    firmware_class.path=/vendor/firmware_mnt/image \
-    pcie_ports=compat \
     iptable_raw.raw_before_defrag=1 \
     ip6table_raw.raw_before_defrag=1 \
-    printk.devkmsg=on \
-	androidboot.selinux=permissive
+    console=null
 	
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
