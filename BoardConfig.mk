@@ -69,7 +69,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS := \
     --dtb $(DEVICE_PATH)/prebuilt/dtb \
-    --board SRPVC22C004 \
+    --board SRPVE13A009 \
     --kernel_offset 0x00008000 \
     --ramdisk_offset 0x02000000 \
     --tags_offset 0x01e00000 \
